@@ -1,17 +1,22 @@
-export type NurseryType ={
+export type Nursery ={
+    id?: number; // optional if coming from Firebase or Excel
+    uuid?: string;
     name: string,
     address: string,
-    lat: number,
-    lon: number, 
-    added_by: string,
+    fulladdr?: string;
+    latitude?: number;
+    longitude?: number;
+    added_by?: string,
     owner_name?: string,
     workers?: [],
     plants?: [],
     rating?: number,
-    distance?: number,
-    contact_info?: {
-        phone?: string,
-        email?: string
-    },
+    distance?: string;
+    specialties?: string[];
+    domain?: string;
+    thumbnail?: string;
+    phone_numbers?: string[];
+    created_at?: string;
+    source?: "mock" | "google" | "excel"; 
     description?: string
 }

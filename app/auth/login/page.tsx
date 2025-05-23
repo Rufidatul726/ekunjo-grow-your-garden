@@ -66,7 +66,7 @@ export default function LoginPage() {
           <LogIn className="mx-auto h-12 w-12 text-green-600" />
           <h2 className="mt-6 text-3xl font-extrabold">Welcome back</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/auth/register"
               className="font-medium text-green-600 hover:text-green-500"

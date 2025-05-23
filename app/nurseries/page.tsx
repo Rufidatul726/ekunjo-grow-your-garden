@@ -27,16 +27,6 @@ interface Nursery {
   source?: "mock" | "google" | "excel"; // helps identify source
 }
 
-
-// interface Nursery {
-//   id: number;
-//   name: string;
-//   address: string;
-//   rating: string;
-//   distance: string;
-//   specialties: string[];
-// }
-
 const MOCK_NURSERIES = [
     {
         "id": 1,
@@ -197,7 +187,7 @@ export default function NurseriesPage() {
 
         <div className="flex flex-row space-x-3">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(nurseryList.length > 0 ? nurseryList : MOCK_NURSERIES).map((nursery) => (
+          {MOCK_NURSERIES.map((nursery) => (
               <Card key={nursery.id} className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -238,12 +228,18 @@ export default function NurseriesPage() {
             {loading ? (
               <p>Fetching location...</p>
             ) : (
-              <iframe 
-              src={`https://www.google.com/maps?q=nursery&ll=${location.lat},${location.lng}&center=${location.lat},${location.lng}&z=14&output=embed`} 
-              className="map-iframe"
-              title="Nursery Map"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <Map
+                location={location}
+                zoom={zoom}
+                setLocation={setLocation}
+                setZoom={setZoom}
+              />
+              // <iframe 
+              // src={`https://www.google.com/maps?q=nursery&ll=${location.lat},${location.lng}&center=${location.lat},${location.lng}&z=14&output=embed`} 
+              // className="map-iframe"
+              // title="Nursery Map"
+              // allowFullScreen
+              // referrerPolicy="no-referrer-when-downgrade"></iframe>
             )}
           </div>
         </div>
