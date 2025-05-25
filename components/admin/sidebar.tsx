@@ -15,7 +15,7 @@ export default function Sidebar({sidebarOpen, setSidebarOpen}: {sidebarOpen: boo
         <>
             <div
         className={cn(
-          "fixed inset-0 z-50 bg-gray-900/80 lg:hidden",
+          "fixed inset-0 z-50 lg:hidden",
           sidebarOpen ? "block" : "hidden"
         )}
         onClick={() => setSidebarOpen(false)}
@@ -24,7 +24,7 @@ export default function Sidebar({sidebarOpen, setSidebarOpen}: {sidebarOpen: boo
       {/* Mobile sidebar panel */}
       <div
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-gray-800 transform transition-transform duration-200 ease-in-out lg:hidden",
+          "fixed inset-y-0 left-0 z-50 w-64 transform transition-transform duration-200 ease-in-out lg:hidden",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -48,7 +48,7 @@ export default function Sidebar({sidebarOpen, setSidebarOpen}: {sidebarOpen: boo
                 className={cn(
                   "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium",
                   pathname === item.href
-                    ? "bg-gray-100 dark:bg-gray-700 text-green-600"
+                    ? " text-green-600"
                     : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                 )}
               >

@@ -12,6 +12,7 @@ interface ExtendedUser extends FirebaseUser {
 type AuthContextType = {
   user: ExtendedUser | null;
   isAuth: boolean | null;
+  role: string;
   login: () => void;
   logout: () => void;
 };
@@ -19,6 +20,7 @@ type AuthContextType = {
 const authContextDefaultValues: AuthContextType = {
   user: null,
   isAuth: null,
+  role: 'guest',
   login: () => {},
   logout: () => {},
 };
@@ -36,6 +38,7 @@ type Props = {
 export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState<ExtendedUser | null>(null);
   const [isAuth, setIsAuth] = useState<boolean | null>(null);
+  const [role, setRole] = useState<string>('guest');
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -47,11 +50,13 @@ export function AuthProvider({ children }: Props) {
         setUser({
           ...currentUser,
           displayName: currentUser.displayName || data?.userName,
-          role: data?.role,  // Add role here
+          role: data?.role,  
         });
+        setRole(data?.role || 'guest');
         setIsAuth(true);
       } else {
         setUser(null);
+        setRole('guest');
         setIsAuth(false);
       }
     });
@@ -61,11 +66,15 @@ export function AuthProvider({ children }: Props) {
   const login = () => {};
   const logout = () => {
     auth.signOut();
+    setUser(null);
+    setRole('guest');
+    setIsAuth(false);
   };
 
   const value = {
     user,
     isAuth,
+    role,
     login,
     logout,
   };

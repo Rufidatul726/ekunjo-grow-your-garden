@@ -7,24 +7,23 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useAuth } from "./context/AuthContext";
+import { redirect } from "next/navigation";
 
 export default function Navbar() {
   const { setTheme, theme } = useTheme();
   const [ userName, setUserName ] = useState(""); 
   const [ showModal, setShowModal ] = useState(false);
 
-  const { isAuth, user, login, logout} = useAuth()
+  const { isAuth, user, logout} = useAuth()
 
-  const getUserName = async() => {
+  useEffect(() => {
+    const getUserName = async() => {
     if(user && user.displayName){
-      console.log(user.role)
       setUserName(user?.displayName)
     }
   }
-
-  useEffect(() => {
     getUserName()
-  },[isAuth])
+  },[isAuth, user])
 
   return (
     <nav className="border-b">
@@ -58,9 +57,18 @@ export default function Navbar() {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem>View Profile</DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Button variant="destructive" className="gap-2" onClick={() => logout()}>
+                    <Link href={`/${user?.role}/`}>
+                      <Button variant="outline" className="gap-2">
+                        Dashboard
+                      </Button>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Button variant="destructive" className="gap-2" onClick={() =>{
+                      logout();
+                      redirect('/');
+                    }}>
                       <LogOut className="h-4 w-4"/>
                       Log Out
                     </Button>

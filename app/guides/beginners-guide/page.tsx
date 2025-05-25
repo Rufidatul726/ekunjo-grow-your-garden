@@ -24,11 +24,11 @@ const BeginnersGuide = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 ">
       {/* Hero Section */}
       <div className="relative h-[300px] md:h-[400px] overflow-hidden">
         <Image
-          src="/placeholder.svg?height=400&width=1200"
+          src="https://images.unsplash.com/photo-1669205410750-0e231c0a0bcd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DS"
           alt="Indoor plants in a bright room"
           width={1200}
           height={400}
@@ -37,7 +37,7 @@ const BeginnersGuide = () => {
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
           <Badge className="mb-4 bg-green-600 hover:bg-green-700">Plant Care Guide</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Beginner's Guide to Indoor Plants</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Beginner&apos;s Guide to Indoor Plants</h1>
           <p className="text-lg md:text-xl text-white max-w-2xl">
             Bring nature indoors with easy-to-grow houseplants that purify air and elevate your space
           </p>
@@ -54,7 +54,7 @@ const BeginnersGuide = () => {
         >
           <p className="text-xl text-gray-700 leading-relaxed">
             Houseplants are more than just decor — they clean the air, boost your mood, and bring nature into your home.
-            Whether you're in a small apartment or just starting your plant journey, this guide will help you choose the
+            Whether you&apos;re in a small apartment or just starting your plant journey, this guide will help you choose the
             right plants and care for them confidently.
           </p>
         </motion.div>
@@ -389,7 +389,7 @@ const BeginnersGuide = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-2">Treatment Options:</h4>
-                    <ul className="space-y-1 text-gray-700">
+                    <ul className="space-y-1 text-gray-100">
                       <li>• Neem oil spray (natural pesticide)</li>
                       <li>• Insecticidal soap for most infestations</li>
                       <li>• Sticky traps for flying insects</li>
@@ -452,7 +452,7 @@ const BeginnersGuide = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-1">Jungalow Corner</h3>
                     <p className="text-gray-600">
-                      Create a "jungalow" corner with layered plant stands, hanging planters, and plants of varying
+                      Create a &quot;jungalow&quot; corner with layered plant stands, hanging planters, and plants of varying
                       heights for a lush look.
                     </p>
                   </div>

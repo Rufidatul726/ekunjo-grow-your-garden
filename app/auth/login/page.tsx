@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { loginUser } from "@/api/login";
 import { useRouter } from "next/navigation";
+import { ExtendedUser } from "@/types/user";
 
 const formSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -42,8 +43,16 @@ export default function LoginPage() {
     setIsLoading(true);
     try {
       await loginUser(values.email, values.password)
-        .then(() => {
-          router.push('/')
+        .then((user:ExtendedUser) => {
+          if (!user) {
+            toast({
+              variant: "destructive",
+              title: "Login Failed",
+              description: "Invalid email or password.",
+            });
+            return;
+          }
+          router.push(`/`);
           toast({
             title: "Success",
             description: "You have successfully logged in.",

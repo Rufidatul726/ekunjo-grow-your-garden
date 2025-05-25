@@ -1,23 +1,6 @@
-import {doc, setDoc, collection, addDoc} from "firebase/firestore";
+import {collection, addDoc} from "firebase/firestore";
 import { db } from "@/firebaseConfig";
-
-interface Nursery {
-    id?: number; // optional if coming from Firebase or Excel
-    uuid?: string;
-    name: string;
-    address: string;
-    fulladdr?: string;
-    rating?: string;
-    latitude?: number;
-    longitude?: number;
-    distance?: string;
-    specialties?: string[];
-    domain?: string;
-    thumbnail?: string;
-    phone_numbers?: string[];
-    created_at?: string;
-    source?: "mock" | "google" | "excel"; // helps identify source
-  }
+import { Nursery } from "@/types/nurseries";
 
 export async function pushToFirebase(nurseries: Nursery[]) {
     const nurseryCollection = collection(db, "nurseries");

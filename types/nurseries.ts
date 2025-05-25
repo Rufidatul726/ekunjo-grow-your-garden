@@ -10,8 +10,8 @@ export type Nursery ={
     owner_name?: string,
     workers?: [],
     plants?: [],
-    rating?: number,
-    distance?: string;
+    rating?: string | undefined;
+    distance?: number | string;
     specialties?: string[];
     domain?: string;
     thumbnail?: string;
