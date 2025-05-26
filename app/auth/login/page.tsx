@@ -70,7 +70,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+      <div className="max-w-md w-full space-y-8 bg-white dark:bg-green-800 p-8 rounded-2xl shadow-xl">
         <div className="text-center">
           <LogIn className="mx-auto h-12 w-12 text-green-600" />
           <h2 className="mt-6 text-3xl font-extrabold">Welcome back</h2>

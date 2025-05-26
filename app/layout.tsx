@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { AuthProvider } from '@/components/context/AuthContext';
-import ConditionalNavbar from '@/components/ConditionalNavbar';
+import Navbar from '@/components/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AuthProvider>
-            <ConditionalNavbar/>
+            <Navbar />
             <main>{children}</main>
             <Toaster />
           </AuthProvider>
