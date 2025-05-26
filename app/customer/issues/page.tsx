@@ -7,17 +7,22 @@ import { db } from "@/firebaseConfig";
 import { useAuth } from "@/components/context/AuthContext";
 import Link from "next/link";
 import CreateIssueForm from "@/components/issues/issueForm";
+import { issueType } from "@/types/issues";
 
 export default function CustomerIssuePage() {
   const { user } = useAuth();
-  const [myIssues, setMyIssues] = useState<any[]>([]);
+  const [myIssues, setMyIssues] = useState<issueType[]>([]);
 
   useEffect(() => {
     if (!user?.uid) return;
 
     const q = query(collection(db, "issues"), where("userId", "==", user.uid));
     const unsub = onSnapshot(q, (snapshot) => {
-      setMyIssues(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      setMyIssues(
+        snapshot.docs.map(
+          (doc) => ({ id: doc.id, ...(doc.data() as Omit<issueType, 'id'>) })
+        ) as issueType[]
+      );
     });
 
     return () => unsub();

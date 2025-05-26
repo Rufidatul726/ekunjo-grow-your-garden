@@ -13,12 +13,13 @@ import { TagSelector } from '@/components/TagSelector';
 import { useAuth } from '@/components/context/AuthContext';
 import { Guide } from '@/types/guides';
 import GuideStepsRenderer from '@/components/guideStepsRenderer';
+import { registerGuide } from '@/api/guides/registerGuide';
 
 export default function NewGuidePage() {
   const router = useRouter();
   const { user } = useAuth();
   const [title, setTitle] = useState('');
-  const [difficulty, setDifficulty] = useState('Beginner');
+  const [difficulty, setDifficulty] = useState<'Beginner' | 'Intermediate' | 'Advanced'>('Beginner');
   const [categories, setCategories] = useState<string[]>([]);
   const [tools, setTools] = useState('');
   const [timeEstimate, setTimeEstimate] = useState('');
@@ -32,17 +33,24 @@ export default function NewGuidePage() {
     }
 
     try {
-      await addDoc(collection(db, 'guides'), {
+      const guideData = await registerGuide(
         title,
         difficulty,
         categories,
         tools,
         timeEstimate,
         steps,
-        authorId: user?.uid,
-        authorName: user?.displayName,
-        createdAt: serverTimestamp(),
-      });
+        user?.uid || '',
+        user?.displayName || '',
+        serverTimestamp()
+      );
+      setTitle('');
+      setDifficulty('Beginner');
+      setCategories([]);
+      setTools('');
+      setTimeEstimate('');
+      setSteps('');
+      setGuides((prev) => [...prev, guideData]);
 
       toast.success('Guide created successfully!');
       router.push('/customer/my-guides');
@@ -116,7 +124,7 @@ export default function NewGuidePage() {
         <select
           className="w-full border rounded p-2 text-sm"
           value={difficulty}
-          onChange={(e) => setDifficulty(e.target.value)}
+          onChange={(e) => setDifficulty(e.target.value as 'Beginner' | 'Intermediate' | 'Advanced')}
         >
           <option value="Beginner">Beginner</option>
           <option value="Intermediate">Intermediate</option>
