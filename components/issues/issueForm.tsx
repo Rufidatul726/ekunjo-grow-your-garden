@@ -9,7 +9,7 @@ import {
 } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
 import { useRouter } from "next/navigation";
-import { useAuth } from "@/components/context/AuthContext"; 
+import { useAuth } from "@/context/AuthContext"; 
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";

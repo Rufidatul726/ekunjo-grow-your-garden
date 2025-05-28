@@ -13,7 +13,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
-import { useAuth } from "@/components/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import { CheckCircle2 } from "lucide-react";
 
 type Message = {

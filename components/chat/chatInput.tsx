@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { sendMessage } from "@/api/customer/chat";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 

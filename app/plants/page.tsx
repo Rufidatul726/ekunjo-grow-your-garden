@@ -8,20 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
-
-type Plant = {
-  id: number;
-  name: string;
-  category: string;
-  image: string;
-  difficulty: string;
-  care: {
-    light: string;
-    water: string;
-    temperature: string;
-    humidity: string;
-  };
-};
+import { PlantData as Plant } from "@/types/plants";
 
 const categories = ["Indoor", "Outdoor", "Vegetable", "Herb", "Succulent", "Flower"];
 
@@ -32,7 +19,7 @@ export default function PlantsPage() {
 
   const filteredPlants = (plantData as Plant[]).filter((plant) => {
     const matchesSearch = plant.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory ? plant.category.toLowerCase() === selectedCategory.toLowerCase() : true;
+    const matchesCategory = selectedCategory ? plant.category?.some(cat => cat.toLowerCase().includes(selectedCategory.toLowerCase())) : true;
     return matchesSearch && matchesCategory;
   });
 
@@ -56,7 +43,7 @@ export default function PlantsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full"
             />
-            <Button onClick={() => {}} className="bg-green-600 hover:bg-green-700">
+            <Button onClick={() => { }} className="bg-green-600 hover:bg-green-700">
               <Search className="mr-2 h-4 w-4" /> Search
             </Button>
           </div>
@@ -104,9 +91,18 @@ export default function PlantsPage() {
                       </div>
                       <div className="p-6">
                         <div className="flex justify-between items-start mb-4">
-                          <div>
-                            <h3 className="text-xl font-semibold">{plant.name}</h3>
-                            <p className="text-sm text-muted-foreground">{plant.category}</p>
+                          <div className="flex flex-wrap gap-2">
+                            <h3 className="text-xl font-semibold">
+                              <Link href={`/plants/${plant.id}`} className="hover:underline text-green-700">
+                                {plant.name}
+                              </Link>
+                            </h3>
+                            {/* <p className="text-sm text-muted-foreground">{plant.category?.[0]}</p> */}
+                            {plant.category?.map((category) => (
+                              <span key={category} className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-full text-sm">
+                                {category}
+                              </span>
+                            ))}
                           </div>
                           <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100 rounded-full text-sm">
                             {plant.difficulty}
@@ -114,10 +110,10 @@ export default function PlantsPage() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div className="flex items-center"><Sun className="h-4 w-4 mr-2" /> {plant.care.light}</div>
-                          <div className="flex items-center"><Droplets className="h-4 w-4 mr-2" /> {plant.care.water}</div>
-                          <div className="flex items-center"><ThermometerSun className="h-4 w-4 mr-2" /> {plant.care.temperature}</div>
-                          <div className="flex items-center"><Wind className="h-4 w-4 mr-2" /> {plant.care.humidity}</div>
+                          <div className="flex items-center"><Sun className="h-4 w-4 mr-2" /> {plant?.care?.light}</div>
+                          <div className="flex items-center"><Droplets className="h-4 w-4 mr-2" /> {plant?.care?.water}</div>
+                          <div className="flex items-center"><ThermometerSun className="h-4 w-4 mr-2" /> {plant?.care?.temperature}</div>
+                          <div className="flex items-center"><Wind className="h-4 w-4 mr-2" /> {plant.care?.humidity}</div>
                         </div>
                       </div>
                     </Card>

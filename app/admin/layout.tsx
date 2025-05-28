@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Sidebar from "@/components/admin/sidebar";
-import { useAuth } from "@/components/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import ProtectedRoute from "@/components/protectedRoute";
 
 export default function AdminLayout({

@@ -2,21 +2,65 @@
     {
       "id": 1,
       "name": "Snake Plant",
-      "category": "Indoor",
+      "category": ["Indoor", "Succulent", "Herb"],
       "image": "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
+      "commonNames": ["Sansevieria", "Mother-in-law's Tongue", "Viper's bowstring hemp"],
+      "description": "A hardy indoor plant known for its air-purifying qualities and striking upright leaves.",
+      "toxicity": "Mildly toxic and poisonous when ingested and can cause nausea, vomiting, and even swelling of the throat and tongue.",
+      "lifespan": "Perennial",
+      "bloomTime": "Spring",
+      "harvestTime": "Spring",
+      "height": "3-4 feet",
+      "spread": "1-2 feet",
+      "leafType": "Striped",
+      "leafColor": "Green",
+      "flowerSize": "Small",
+      "flowerColor": "White",
+      "stemColor": "Green",
+      "dormancy": "Winter",
+      "growthSeason": "Spring",
+      "growthRate": "Slow",
+
       "care": {
         "light": "Indirect",
         "water": "Low",
         "temperature": "60-85°F",
-        "humidity": "Low"
-      }
+        "humidity": "Low",
+        "fertilizer": "NPK 10-10-10 or 20-20-20 every 2-3 weeks during growing season",
+        "pruning": "None",
+        "propagation": "Strips of leaf cuttings",
+        "repotting": "Once a year in spring"
+      },
+      "diseases": [
+        {
+          "name": "Fungal Leaf Spot",
+          "symptoms": "Small, circular spots on leaves",
+          "identification": "Fungal Leaf Spot is a common fungal disease that affects many plants. It is caused by the fungus Cercospora spp.",
+          "cause": "Fungi",
+          "prevention": "Avoid overhead watering",
+          "treatment": "Remove and destroy infected leaves"
+        },
+        {
+          "name": "Bacterial Leaf Spot",
+          "symptoms": "Large, irregular spots on leaves",
+          "identification": "Bacterial Leaf Spot is a common bacterial disease that affects many plants. It is caused by the bacteria Xanthomonas spp.",
+          "cause": "Bacteria",
+          "prevention": "Avoid overhead watering",
+          "treatment": "Remove and destroy infected leaves"
+        }
+      ],
+      "growthTips": [
+        "Water sparingly during dormancy",
+        "Fertilize every 2-3 weeks during growing season",
+        "Keep away from drafts and cold windows"
+      ]
     },
     {
       "id": 2,
       "name": "Monstera Deliciosa",
       "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&q=80",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "difficulty": "Moderate",
       "care": {
         "light": "Bright Indirect",
@@ -29,7 +73,7 @@
       "id": 3,
       "name": "Herbs Garden",
       "image": "https://plus.unsplash.com/premium_photo-1678653651270-9f0f68119d99?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "category": "Edible",
+      "category": ["Edible"],
       "difficulty": "Easy",
       "care": {
         "light": "Full Sun",
@@ -41,7 +85,7 @@
     {
       "id": 4,
       "name": "Aloe Vera",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
       "care": {
@@ -54,7 +98,7 @@
     {
       "id": 5,
       "name": "Spider Plant",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "https://images.unsplash.com/photo-1610551724444-5fb527b5ad20?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
       "care": {
@@ -67,7 +111,7 @@
     {
       "id": 6,
       "name": "Peace Lily",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -80,7 +124,7 @@
     {
       "id": 7,
       "name": "Pothos",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -93,7 +137,7 @@
     {
       "id": 8,
       "name": "Fiddle Leaf Fig",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Hard",
       "care": {
@@ -106,7 +150,7 @@
     {
       "id": 9,
       "name": "Basil",
-      "category": "Herb",
+      "category": ["Herb"],
       "image": "https://images.unsplash.com/photo-1646983205802-0adf649e4a5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
       "care": {
@@ -119,7 +163,7 @@
     {
       "id": 10,
       "name": "Rosemary",
-      "category": "Herb",
+      "category": ["Herb"],      
       "image": "https://images.unsplash.com/photo-1603129624917-3c579e864025?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
       "care": {
@@ -132,7 +176,7 @@
     {
       "id": 11,
       "name": "Lavender",
-      "category": "Flower",
+      "category": ["Flower"],
       "image": "https://images.unsplash.com/photo-1707097701819-697eecdd5e68?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Moderate",
       "care": {
@@ -145,7 +189,7 @@
     {
       "id": 12,
       "name": "Mint",
-      "category": "Herb",
+      "category": ["Herb"],      
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -158,7 +202,7 @@
     {
       "id": 13,
       "name": "Cactus",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -171,7 +215,7 @@
     {
       "id": 14,
       "name": "Zebra Plant",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -184,7 +228,7 @@
     {
       "id": 15,
       "name": "Areca Palm",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -197,7 +241,7 @@
     {
       "id": 16,
       "name": "Begonia",
-      "category": "Flower",
+      "category": ["Flower"],
       "image": "https://images.unsplash.com/photo-1606113345300-32c84150fa1a?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Moderate",
       "care": {
@@ -210,7 +254,7 @@
     {
       "id": 17,
       "name": "Rubber Plant",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -223,7 +267,7 @@
     {
       "id": 18,
       "name": "ZZ Plant",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -236,7 +280,7 @@
     {
       "id": 19,
       "name": "Calathea",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Hard",
       "care": {
@@ -249,7 +293,7 @@
     {
       "id": 20,
       "name": "Dracaena",
-      "category": "Indoor",
+      "category": ["Indoor"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -262,7 +306,7 @@
     {
       "id": 21,
       "name": "Chili Plant",
-      "category": "Vegetable",
+      "category": ["Vegetable"],
       "image": "https://images.unsplash.com/photo-1688557862243-e472cb37ba3d?q=80&w=2119&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Moderate",
       "care": {
@@ -275,7 +319,7 @@
     {
       "id": 22,
       "name": "Lemon Tree",
-      "category": "Fruit",
+      "category": ["Fruit"],
       "image": "",
       "difficulty": "Hard",
       "care": {
@@ -288,7 +332,7 @@
     {
       "id": 23,
       "name": "Tomato Plant",
-      "category": "Vegetable",
+      "category": ["Vegetable"],
       "image": "https://images.unsplash.com/photo-1591857177593-aec16c2d8f60?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Moderate",
       "care": {
@@ -301,7 +345,7 @@
     {
       "id": 24,
       "name": "Marigold",
-      "category": "Outdoor",
+      "category": ["Outdoor"],
       "image": "https://images.unsplash.com/photo-1694913777517-8e376dc68bf1?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Easy",
       "care": {
@@ -314,7 +358,7 @@
     {
       "id": 25,
       "name": "Hibiscus",
-      "category": "Outdoor",
+      "category": ["Outdoor"],
       "image": "https://images.unsplash.com/photo-1636775660140-41dc4683596f?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "difficulty": "Moderate",
       "care": {
@@ -327,7 +371,7 @@
     {
       "id": 26,
       "name": "Bougainvillea",
-      "category": "Outdoor",
+      "category": ["Outdoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -340,7 +384,7 @@
     {
       "id": 27,
       "name": "Jasmine",
-      "category": "Outdoor",
+      "category": ["Outdoor"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -353,7 +397,7 @@
     {
       "id": 28,
       "name": "Oleander",
-      "category": "Outdoor",
+      "category": ["Outdoor"],
       "image": "",
       "difficulty": "Moderate",
       "care": {
@@ -367,7 +411,7 @@
     {
       "id": 32,
       "name": "Lithops",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -380,7 +424,7 @@
     {
       "id": 33,
       "name": "String of Pearls",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -393,7 +437,7 @@
     {
       "id": 34,
       "name": "String of Hearts",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -406,7 +450,7 @@
     {
       "id": 35,
       "name": "Burro's Tail",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -419,7 +463,7 @@
     {
       "id": 36,
       "name": "Panda Plant",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -432,7 +476,7 @@
     {
       "id": 37,
       "name": "Crown of Thorns",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -445,7 +489,7 @@
     {
       "id": 38,
       "name": "Kalanchoe",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -458,7 +502,7 @@
     {
       "id": 39,
       "name": "Christmas Cactus",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -471,7 +515,7 @@
     {
       "id": 40,
       "name": "Echeveria",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -484,7 +528,7 @@
     {
       "id": 41,
       "name": "Haworthia",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -497,7 +541,7 @@
     {
       "id": 42,
       "name": "Aloe Vera",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -510,7 +554,7 @@
     {
       "id": 43,
       "name": "Jade Plant",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -523,7 +567,7 @@
     {
       "id": 44,
       "name": "Ponytail Palm",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -536,7 +580,7 @@
     {
       "id": 45,
       "name": "Paddle Plant",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -549,7 +593,7 @@
     {
       "id": 46,
       "name": "String of Bananas",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -562,7 +606,7 @@
     {
       "id": 47,
       "name": "String of Dolphins",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -575,7 +619,7 @@
     {
       "id": 48,
       "name": "String of Hearts",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -588,7 +632,7 @@
     {
       "id": 49,
       "name": "String of Turtles",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -601,7 +645,7 @@
     {
       "id": 50,
       "name": "String of Watermelons",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -614,7 +658,7 @@
     {
       "id": 51,
       "name": "String of Spades",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {
@@ -627,7 +671,7 @@
     {
       "id": 52,
       "name": "String of Fishhooks",
-      "category": "Succulent",
+      "category": ["Succulent"],
       "image": "",
       "difficulty": "Easy",
       "care": {

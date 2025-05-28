@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { TagSelector } from '@/components/TagSelector';
-import { useAuth } from '@/components/context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { Guide } from '@/types/guides';
 import GuideStepsRenderer from '@/components/guideStepsRenderer';
 import { registerGuide } from '@/api/guides/registerGuide';

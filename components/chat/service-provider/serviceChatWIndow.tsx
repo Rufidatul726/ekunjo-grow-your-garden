@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { onSnapshot, collection, orderBy, query, doc, getDoc } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
-import { useAuth } from "@/components/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import ServiceChatInput from "./serviceChatInput";
 
 interface Message {

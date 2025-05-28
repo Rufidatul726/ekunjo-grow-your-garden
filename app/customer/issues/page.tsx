@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { db } from "@/firebaseConfig";
-import { useAuth } from "@/components/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
 import CreateIssueForm from "@/components/issues/issueForm";
 import { issueType } from "@/types/issues";

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { db } from '@/firebaseConfig';
 import { collection, addDoc, onSnapshot, Timestamp, deleteDoc, doc, updateDoc } from 'firebase/firestore';
-import { useAuth } from '@/components/context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { Archive, Edit } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
