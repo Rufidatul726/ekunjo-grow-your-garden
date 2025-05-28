@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -30,7 +28,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 
-export default function FertilizerGuidelinePage() {
+export default function FertilizerPage() {
   return (
     <div className="p-6 max-w-6xl mx-auto space-x-6">
       <section className="py-6 px-4 bg-gradient-to-br from-green-50 to-gray-50 my-4 text-center space-y-8">

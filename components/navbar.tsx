@@ -11,19 +11,19 @@ import { redirect } from "next/navigation";
 
 export default function Navbar() {
   const { setTheme, theme } = useTheme();
-  const [ userName, setUserName ] = useState(""); 
-  const [ showModal, setShowModal ] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
-  const { isAuth, user, logout} = useAuth()
+  const { isAuth, user, logout } = useAuth()
 
   useEffect(() => {
-    const getUserName = async() => {
-    if(user && user.displayName){
-      setUserName(user?.displayName)
+    const getUserName = async () => {
+      if (user && user.displayName) {
+        setUserName(user?.displayName)
+      }
     }
-  }
     getUserName()
-  },[isAuth, user])
+  }, [isAuth, user])
 
   return (
     <nav className="border-b">
@@ -35,7 +35,7 @@ export default function Navbar() {
               <span className="font-bold text-xl">E-Kunjo</span>
             </Link>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <Link href="/nurseries">
               <Button variant="ghost">Find Nurseries</Button>
@@ -43,6 +43,10 @@ export default function Navbar() {
             <Link href="/plants">
               <Button variant="ghost">Plant Guide</Button>
             </Link>
+            <Link href="/fertilizer">
+              <Button variant="ghost">Fertilizer Guide</Button>
+            </Link>
+
             <Link href="/disease-detection">
               <Button variant="ghost">Disease Detection</Button>
             </Link>
@@ -65,11 +69,11 @@ export default function Navbar() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Button variant="destructive" className="gap-2" onClick={() =>{
+                    <Button variant="destructive" className="gap-2" onClick={() => {
                       logout();
                       redirect('/');
                     }}>
-                      <LogOut className="h-4 w-4"/>
+                      <LogOut className="h-4 w-4" />
                       Log Out
                     </Button>
                   </DropdownMenuItem>

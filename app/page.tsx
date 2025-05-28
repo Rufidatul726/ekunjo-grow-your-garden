@@ -1,8 +1,6 @@
-"use client"
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Leaf, MapPin, Camera } from "lucide-react";
+import { Leaf, MapPin, Camera, Sprout } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -43,7 +41,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <Card className="p-6 space-y-4">
               <MapPin className="h-12 w-12 text-green-600" />
               <h3 className="text-2xl font-semibold">Find Local Nurseries</h3>
@@ -65,6 +63,14 @@ export default function Home() {
               <h3 className="text-2xl font-semibold">Disease Detection</h3>
               <p className="text-muted-foreground">
                 Upload plant photos to identify diseases and get treatment recommendations
+              </p>
+            </Card>
+
+            <Card className="p-6 space-y-4">
+              <Sprout className="h-12 w-12 text-green-600" />
+              <h3 className="text-2xl font-semibold">Fertilizer Guideline</h3>
+              <p className="text-muted-foreground">
+                Learn how to choose and apply fertilizers based on Bangladeshi soil and crop needs
               </p>
             </Card>
           </div>
