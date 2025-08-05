@@ -3,15 +3,15 @@
 
 import { Card } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-import { Nursery } from "@/interfaces/nursery";
+import { Nursery } from "@/types/nurseries";
 import { MapPin } from "lucide-react";
-import { getTop10NearestNurseries } from "@/hooks/useNearestNurseries";
+import { getNearestNurseries } from "@/api/nurseries/getNursery";
 
 const NurseryList = () => {
     const [nurseryList, setNurseryList] = useState<Nursery[]>([]);
 
     useEffect(() => {
-        getTop10NearestNurseries()
+        getNearestNurseries()
             .then((data) => {
                 setNurseryList(data);
                 console.log("Nursery List:", data);

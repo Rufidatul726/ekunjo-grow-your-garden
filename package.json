@@ -1,6 +1,6 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "ekunjo",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -45,6 +45,7 @@
     "autoprefixer": "10.4.15",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
+    "cloudinary": "^2.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
@@ -60,6 +61,7 @@
     "leaflet-routing-machine": "^3.2.12",
     "lucide-react": "^0.446.0",
     "next": "13.5.1",
+    "next-cloudinary": "^6.16.0",
     "next-themes": "^0.3.0",
     "postcss": "8.4.30",
     "react": "18.2.0",
