@@ -31,7 +31,7 @@ export default function DiseaseDetectionPage() {
 
       // Simulate progress bar
       for (let i = 0; i <= 90; i += 10) {
-        await new Promise((r) => setTimeout(r, 100));
+        await new Promise((r) => setTimeout(r, 150));
         setProgress(i);
       }
 
